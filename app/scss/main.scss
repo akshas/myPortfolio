@@ -1,0 +1,211 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+* {
+	box-sizing: border-box;
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+
+	input,
+	textarea {
+		border: #666 1px solid;
+		outline: none;
+
+		&:focus:required:invalid {
+			border-color: red;
+		}
+
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: center;
+	color: $accent;
+	margin: 30px 0 40px;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/**
+ *	cusom sass
+ */
+/**
+ *  header & menu
+ */
+.showMenu {
+	display: block !important;
+}
+
+.header {
+	background-color: $accent;
+	min-height: 50px;
+	line-height: 50px;
+	position: relative;
+
+	// margin-bottom: 30px;
+	// .title {
+	// 	display: none;
+	// }
+	.menu-heandle {
+		display: none;
+	}
+
+	.bars {
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		// transform: translateY(-50%);
+		width: 30px;
+		height: 30px;
+
+		img {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.menu {
+		height: 100%;
+
+
+		ul {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+
+			li {
+				position: relative;
+
+				&:after {
+					content: '';
+					width: 5px;
+					height: 5px;
+					background-color: #333;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translate(50%, -50%);
+				}
+
+				&:last-child {
+					&:after {
+						display: none;
+					}
+				}
+
+				a {
+					color: $main-color;
+					font-weight: 700;
+					display: block;
+					height: 100%;
+					padding: 10px 20px;
+
+					&:hover {
+						text-decoration: none;
+						color: $second-color;
+					}
+				}
+			}
+		}
+	}
+
+	//menu
+}
+
+// header
+
+/**
+ *  content
+ */
+.img-container {
+	position: relative;
+}
+
+.main-photo {
+	width: 100%;
+	// max-height: 366px;
+}
+
+h2.heading {
+	// margin: 30px 0;
+	font-size: 18px;
+	text-align: left;
+	margin: 0 0 20px 40px;
+}
+
+.person-data {
+	li {
+		margin-top: 10px;
+		position: relative;
+		font-size: 14px;
+
+		&:after {
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-color: lighten($accent, 25%);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	.label {
+		font-weight: 700;
+	}
+}
+
+@import "pages/lebenslauf"; // Always at the end
+@import "media"; // Always at the end

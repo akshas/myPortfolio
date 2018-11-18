@@ -1,0 +1,193 @@
+
+.links{
+	li{
+		a{
+			position    : relative;
+			line-height : 22px;
+
+			&:after{
+				content          : '';
+
+				position         : absolute;
+				display          : block;
+				bottom           : 2px;
+				left             : 0;
+
+				height           : 1px;
+				width            : 100%;
+
+				background-color : $accent;
+
+				transition       : width .3s;
+			}
+			&:hover{
+				color : rgba($dark, .5);
+				&:after{
+					width            : 0;
+					background-color : rgba($dark, .5);
+				}
+			}
+		}
+	}
+}
+.calc{
+	margin-top : 85px;
+
+	&-radio{
+		flex-basis : 50%;
+		&:last-child{
+			display    : flex;
+			flex-basis : 100%;
+		}
+	}
+
+	&-programms{
+		display   : flex;
+		flex-wrap : wrap;
+
+		input[type=radio]{
+			display : none;
+			&:checked{
+				&+label::before{
+					background-color : $accent;
+				}
+			}
+		}
+		label{
+			display       : inline-block;
+			margin-bottom : 20px;
+
+			small{
+				display     : block;
+
+				margin-left : 38px;
+
+				opacity     : .5;
+				font-size   : 10px;
+				color       : $dark;
+			}
+			&::before{
+				content          : '';
+
+				display          : inline-block;
+				vertical-align   : middle;
+
+				height           : 24px;
+				width            : 24px;
+				margin-right     : 10px;
+
+				background-color : $white;
+				border           : 6px solid $white;
+				border-radius    : 50%;
+				box-shadow       : 0 5px 10px  rgba(0,0,1,.1);
+
+				transition       : all .25s;
+			}
+		}
+	}
+
+	.popular{
+		position         : relative;
+		display          : flex;
+
+		height           : 25px;
+		width            : 45%;
+		margin-left      : 16px;
+		padding          : 5px;
+
+		background-color : $accent;
+		font-size        : 10px;
+		color            : $white;
+		text-transform   : uppercase;
+
+		justify-content  : center;
+		align-items      : center;
+
+		&::before{
+			content            : '';
+
+			position           : absolute;
+			top                : 50%;
+			left               : -12px;
+
+			height             : 0;
+			width              : 0;
+
+			border             : 6px solid transparent;
+			border-right-color : $accent;
+
+			transform          : translateY(-50%);
+		}
+	}
+
+	.calc-legal{
+		font-size : 12px;
+		color     : $dark;
+
+		
+	}
+
+// sum
+	&-sum{
+		&_heading{
+			margin-bottom : 20px;
+			font-size     : 22px;
+		}
+
+		&_range{
+			margin : 30px 30px;
+		}
+
+		&_invest{
+			margin-top    : 20px;
+			margin-bottom : 10px;
+
+			&_label{
+				margin-right   : 10px;
+
+				font-weight    : 700;
+				text-transform : capitalize;
+			}
+			&_num{
+				display          : inline-block;
+
+				padding          : 10px 48px;
+
+				background-color : $white;
+			}
+		}
+
+		&_total{
+			display          : inline-block;
+
+			padding          : 10px 28px;
+
+			background-color : $white;
+			font-size        : 18px;
+			font-weight      : 400;
+			color            : $accent;
+			text-align       : center;
+
+			small{
+				display   : block;
+
+				font-size : 10px;
+				color     : $dark;
+			}
+		}
+
+		&_month{
+			display    : inline-block;
+
+			padding    : 10px 28px;
+
+			font-size  : 18px;
+			text-align : center;
+
+			small{
+				display   : block;
+				font-size : 10px;
+			}
+		}
+	}
+}

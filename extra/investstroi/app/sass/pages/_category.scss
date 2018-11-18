@@ -1,0 +1,62 @@
+
+
+
+.box{
+	position      : relative;
+	margin-bottom : 30px;
+}
+.obj-card{
+	height           : 100%;
+	background-color : #fff;
+
+	&_text{
+		padding : 30px;
+	}
+
+	img{
+		width : 100%;
+	}
+
+	&_title{
+	}
+	&_prise{
+		font-weight: 700;
+		font-size: 18px;
+		color: $accent;
+		text-align: center;
+	}
+	&_button{
+		position         : relative;
+		top              : 40px;
+
+		width            : 100%;
+		padding          : 15px 25px;
+
+		cursor           : pointer;
+		background-color : $accent;
+		font-size        : 16px;
+		font-weight      : 700;
+		color            : black;
+		color            : #fff !important;
+		border           : none;
+		border-radius    : 5px;
+		box-shadow       : 0 5px 0 darken($accent, 10%);
+
+    // display: block;
+		&:hover {
+			background-color : darken($accent, 2%);
+			box-shadow       : 0 5px 0 darken($accent, 7%);
+		}
+	}
+
+	&_more{
+		display    : block;
+
+		margin-top : 60px;
+		padding    : 20px 0;
+
+		font-size  : 16px;
+		color      : $dark;
+		text-align : center;
+	}
+}

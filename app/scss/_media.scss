@@ -1,0 +1,125 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
+@include media-breakpoint-down(xl) {}
+
+//Large: ≥992px
+@include media-breakpoint-down(lg) {
+	h2.heading {
+		margin: 0;
+		font-size: 24px;
+	}
+
+	.person-data {
+		li {
+			margin-top: 15px;
+			font-size: 18px;
+		}
+	}
+
+	.text {
+		padding-top: 50px;
+	}
+
+	.person-data {
+		padding: 0;
+	}
+}
+
+//Medium: ≥768px
+@include media-breakpoint-down(md) {
+
+	h2 {
+		display: none;
+	}
+
+	.person-data {
+		padding-right: 40px;
+
+		li {
+			padding-left: 10px;
+		}
+	}
+
+}
+
+//Small: ≥576px
+@include media-breakpoint-down(sm) {
+
+	.main-photo {
+		width: 60%;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	.header {
+		.menu {
+			ul {
+				li {
+					a {
+						padding: 5px 13px;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+//Extra small: >0
+@include media-breakpoint-down(xs) {
+
+	.header {
+		.menu-heandle {
+			display: flex;
+
+		}
+
+		.bars {
+			position: relative;
+			top: 10px;
+			left: 10px;
+		}
+
+		.title {
+			display: block;
+			margin-left: 20px;
+		}
+
+		.menu {
+			ul {
+				display: none;
+
+				li {
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
+@include media-breakpoint-up(xs) {}
+
+//Small: ≤576px
+@include media-breakpoint-up(sm) {}
+
+//Medium: ≤768px
+@include media-breakpoint-up(md) {}
+
+//Large: ≤992px
+@include media-breakpoint-up(lg) {}
+
+//Extra large: ≤1200px
+@include media-breakpoint-up(xl) {}
